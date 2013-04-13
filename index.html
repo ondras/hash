@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Web Worker Hash Cracker</title>
+	<script src="hash.js"></script>
+</head>
+<body>
+	<h1>Web Worker Hash Bruteforcer</h1>
+	<p>Computes SHA1 and MD5 hashes in your browser using Web Workers. Individual hashing routines are &copy; Paul Johnston.</p>
+	<table>
+		<tr>
+			<td>Algorithm:</td>
+			<td><select id="algo">
+					<option value="md5">MD5</option>
+					<option value="sha1">SHA1</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Alphabet:</td>
+			<td><input id="alphabet" value="abcdefghijklmnopqrstuvwxyz" size="50" /></td>
+		</tr>
+		<tr>
+			<td>Threads:</td>
+			<td><select id="workers">
+				<option value="1">1</option>
+				<option value="2" selected="selected">2</option>
+				<option value="4">4</option>
+				<option value="8">8</option>
+				<option value="16">16</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Hashes:</td>
+			<td><textarea id="hashes" rows="10" cols="60">
+edb433bdd7c13851c7c68cb31a5acf33a80cd2cc
+9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684
+6367c48dd193d56ea7b0baad25b19455e529f5ee
+79c2b46ce2594ecbcb5b73e928345492
+900150983cd24fb0d6963f7d28e17f72
+e99a18c428cb38d5f260853678922e03
+</textarea></td>
+		</tr>
+		<tr>
+			<td>Results:</td>
+			<td><textarea rows="5" cols="60" id="results"></textarea></td>
+		</tr>
+		<tr>
+			<td>Stats:</td>
+			<td id="stats"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" id="go" value="Start" /></td>
+		</tr>
+	</table>
+	
+	<script>var app = new App();</script>
+</body>
+</html>

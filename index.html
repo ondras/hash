@@ -2,8 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Web Worker Hash Cracker</title>
+	<title>Web Worker Hash Bruteforcer</title>
 	<script src="hash.js"></script>
+	<style>
+		.running:before {
+			content: url(throbber.gif) " ";
+			vertical-align: middle;
+		}
+	</style>
 </head>
 <body>
 	<h1>Web Worker Hash Bruteforcer</h1>
@@ -52,7 +58,7 @@ e99a18c428cb38d5f260853678922e03
 		</tr>
 		<tr>
 			<td></td>
-			<td><input type="button" id="go" value="Start" /></td>
+			<td><button id="go" />Start</button></td>
 		</tr>
 	</table>
 	

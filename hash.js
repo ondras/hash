@@ -57,7 +57,8 @@ App.prototype._updateWorkers = function() {
 App.prototype._toggle = function() {
 	if (this._workers.length) { /* stop */
 		while (this._workers.length) { this._workers.pop().terminate(); }
-		this._dom.go.value = "Start";
+		this._dom.go.innerHTML = "Start";
+		this._dom.go.className = "";
 		this._dom.alphabet.disabled = false;
 		this._dom.hashes.disabled = false;
 		this._dom.algo.disabled = false;
@@ -78,7 +79,8 @@ App.prototype._toggle = function() {
 		this._updateStats();
 		this._updateWorkers();
 		this._dom.results.value = "";
-		this._dom.go.value = "Stop";
+		this._dom.go.innerHTML = "Stop";
+		this._dom.go.className = "running";
 		this._dom.alphabet.disabled = true;
 		this._dom.hashes.disabled = true;
 		this._dom.algo.disabled = true;
